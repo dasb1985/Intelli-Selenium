@@ -17,5 +17,12 @@ public class RadioButton {
         List<WebElement> radioButtons =driver.findElements(By.name("color"));
         radioButtons.get(1).click();
 
+        for (WebElement radioButton : radioButtons){
+            if(radioButton.isSelected()){
+                System.out.println(radioButton.getAttribute("value"));
+            }
+        }
+
+
     }
 }
